@@ -12,7 +12,8 @@ import axios from 'axios';
  */
 const App = () => {
   const apikey = `10abef78`;
-  const url = `https://://www.omdbapi.com/?apikey=${apikey}&`;
+  const url = `https://www.omdbapi.com/?apikey=${apikey}&`;
+  
 
   /**
    * setting up state using useState hook
