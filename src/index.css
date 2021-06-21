@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'montserrat', sans-serif;
+	background-color: #262223;
+}
+
+header {
+	padding: 50px 15px 0px;
+}
+
+header h1 {
+	color: #fff;
+	font-size: 48px;
+	font-weight: 500;
+	text-align: center;
+}
+
+main {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+section {
+	padding: 15px;
+}
+
+.searchbox {
+	display: block;
+	width: 100%;
+	padding: 15px;
+
+	border: none;
+	outline: none;
+	background: none;
+
+	background-color: #eee;
+	border-radius: 8px;
+
+	color: #53565a;
+	font-size: 20px;
+	font-weight: 300;
+
+	transition: 0.4s ease-out;
+}
+
+.searchbox:focus {
+	box-shadow: 0px 0px 8px 3px #e3ced5;
+}
+
+.movies {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -15px;
+}
+
+.movies .movie {
+	width: 33.333%;
+	min-width: 250px;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.movies .movie img {
+	display: block;
+	width: 100%;
+	border-radius: 8px;
+	max-width: 100%;
+}
+
+.movies .movie h3 {
+	color: #262223;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 10px;
+	background: #ddc6b6;
+	flex: 1 1 100%;
+	transition: 0.4s ease-out;
+	border-radius: 8px;
+}
+
+.movies .movie:hover h3 {
+	background: #ffffff;
+	color: #223343;
+}
+
+.background {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal {
+	text-align: center;
+}
+
+.modal-background {
+	opacity: 0;
+	transition: 0.4s ease-in-out;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+}
+
+.modal-showing-true {
+	opacity: 1;
+	pointer-events: showing;
+}
+
+.modal-inner {
+	background-color: white;
+	width: 900px;
+	max-width: calc(100% - 60px);
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	border-radius: 10px;
+	padding: 10px;
+	transition: all 0.3s ease-in-out;
+}
+
+.modal-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+	max-width: 100%;
+}
+
+.modal-text {
+	padding: 15;
+	font-size: 15px;
+}
+
+.modal-text p {
+	line-height: 180%;
+}
+
+.movie-desc {
+	padding: 5px;
+	font-size: medium;
+}
+
+.modal.enter-done {
+	opacity: 1;
+	pointer-events: visible;
+}
+
+.modal.enter-done .modal-inner {
+	transform: translateY(0);
+}
+
+.modal.exit .modal-inner {
+	transform: translateY(-200px);
+}
